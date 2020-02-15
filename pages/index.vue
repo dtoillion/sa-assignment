@@ -30,6 +30,7 @@
 
 <script>
 export default {
+  middleware: 'users',
   data: () => ({
     title: 'Spherical Analytics - Skills Assessment',
     subtitle:
