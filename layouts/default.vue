@@ -51,7 +51,7 @@ export default {
           to: '/users'
         }
       ],
-      title: 'Client list - Daniel Toillion'
+      title: 'Clients:'
     }
   }
 }
