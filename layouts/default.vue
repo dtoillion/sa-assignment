@@ -24,7 +24,7 @@
       <v-spacer />
     </v-app-bar>
     <v-content>
-      <v-container>
+      <v-container fluid class="pa-6">
         <nuxt />
       </v-container>
     </v-content>

@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <v-layout column justify-center align-center>
+  <v-layout>
+    <v-flex xs12 sm8 md6 class="mx-auto">
       <nuxt-child />
-    </v-layout>
-  </div>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>

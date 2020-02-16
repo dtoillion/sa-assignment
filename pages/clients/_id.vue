@@ -1,5 +1,5 @@
 <template>
-  <v-card shaped min-width="50%">
+  <v-card shaped>
     <div class="d-flex flex-no-wrap justify-space-between pa-4">
       <div>
         <v-card-title class="headline" v-html="client.name" />
@@ -13,11 +13,7 @@
           <v-img :src="client.avatar">
             <template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
-                <v-progress-circular
-                  indeterminate
-                  size="40"
-                  color="primary"
-                ></v-progress-circular>
+                <v-progress-circular indeterminate size="40" color="primary" />
               </v-row>
             </template>
           </v-img>
