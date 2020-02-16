@@ -22,7 +22,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff', height: '6px' },
+  loading: { color: '#6c5ce7', height: '6px' },
   /*
    ** Global CSS
    */
@@ -61,10 +61,10 @@ export default {
       dark: true,
       themes: {
         dark: {
-          primary: colors.blue.darken2,
+          primary: '#6c5ce7',
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
+          info: '#0984e3',
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3

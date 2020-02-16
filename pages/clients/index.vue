@@ -32,7 +32,12 @@ export default {
     filteredClients() {
       return this.$store.state.clients.filter((client) => {
         if (this.search) {
-          return client.name.toLowerCase().includes(this.search.toLowerCase())
+          const res =
+            client.name.toLowerCase().includes(this.search.toLowerCase()) ||
+            client.title.toLowerCase().includes(this.search.toLowerCase()) ||
+            client.quote.toLowerCase().includes(this.search.toLowerCase()) ||
+            client.nationality.toLowerCase().includes(this.search.toLowerCase())
+          return res
         } else {
           return this.$store.state.clients
         }

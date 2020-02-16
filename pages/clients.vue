@@ -1,6 +1,6 @@
 <template>
   <v-layout>
-    <v-flex xs12 sm8 md6 class="mx-auto">
+    <v-flex xs12 sm8 md6 xl4 class="mx-auto">
       <nuxt-child />
     </v-flex>
   </v-layout>
