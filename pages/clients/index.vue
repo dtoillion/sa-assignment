@@ -17,7 +17,6 @@
 </template>
 
 <script>
-/* eslint-disable */
 import AppClient from '../../components/AppClient.vue'
 
 export default {
@@ -31,14 +30,17 @@ export default {
   },
   computed: {
     filteredClients() {
+      // a filter inside of a filter is not ideal, however this way of looping through the data will not break if the api should change in the future
       return this.$store.state.clients.filter((client) => {
         if (this.search) {
-          const res =
-            (client.name ? client.name.toLowerCase().includes(this.search.toLowerCase()) : false) ||
-            (client.title ? client.title.toLowerCase().includes(this.search.toLowerCase()) : false) ||
-            (client.quote ? client.quote.toLowerCase().includes(this.search.toLowerCase()) : false) ||
-            (client.nationality ? client.nationality.toLowerCase().includes(this.search.toLowerCase()) : false)
-          return res
+          const matchesSearch = Object.keys(client).filter((clientInfo) => {
+            return client[clientInfo]
+              ? client[clientInfo]
+                  .toLowerCase()
+                  .includes(this.search.toLowerCase())
+              : false
+          })
+          return matchesSearch.length
         } else {
           return this.$store.state.clients
         }
