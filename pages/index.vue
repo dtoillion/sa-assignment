@@ -21,7 +21,7 @@
         </v-list>
         <v-card-actions>
           <v-spacer />
-          <v-btn color="primary" nuxt to="/users">{{ buttonText }}</v-btn>
+          <v-btn color="primary" nuxt to="/clients">{{ buttonText }}</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>

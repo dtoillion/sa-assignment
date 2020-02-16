@@ -1,16 +1,16 @@
 <template>
-  <v-card shaped min-width="60%">
+  <v-card shaped min-width="50%">
     <div class="d-flex flex-no-wrap justify-space-between pa-4">
       <div>
-        <v-card-title class="headline" v-html="user.name" />
-        <v-card-subtitle v-text="user.title" />
+        <v-card-title class="headline" v-html="client.name" />
+        <v-card-subtitle v-text="client.title" />
         <v-card-text>
-          <h3 v-if="user.quote">{{ user.quote }}</h3>
+          <h3 v-if="client.quote">{{ client.quote }}</h3>
         </v-card-text>
       </div>
       <div class="d-flex flex-column align-center">
         <v-avatar class="mb-3" size="128" right>
-          <v-img :src="user.avatar">
+          <v-img :src="client.avatar">
             <template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
                 <v-progress-circular
@@ -23,18 +23,18 @@
           </v-img>
         </v-avatar>
         <v-sheet
-          v-if="user.nationality"
+          v-if="client.nationality"
           elevation="6"
           color="info"
           class="pa-1 overline"
         >
-          {{ user.nationality }}
+          {{ client.nationality }}
         </v-sheet>
       </div>
     </div>
     <v-divider />
     <v-card-actions class="pa-4">
-      <v-btn class="mx-auto" color="primary" to="/users" nuxt>
+      <v-btn class="mx-auto" color="primary" to="/clients" nuxt>
         {{ buttonText }}
       </v-btn>
     </v-card-actions>
@@ -49,8 +49,10 @@ export default {
     }
   },
   computed: {
-    user() {
-      return this.$store.state.users.find((u) => u.id === this.$route.params.id)
+    client() {
+      return this.$store.state.clients.find(
+        (u) => u.id === this.$route.params.id
+      )
     }
   }
 }

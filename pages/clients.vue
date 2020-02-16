@@ -10,8 +10,8 @@
 export default {
   async fetch({ $axios, store }) {
     const response = await $axios.get('clients.json')
-    const users = response.data
-    store.commit('SET_USERS', users)
+    const clients = response.data
+    store.commit('SET_CLIENTS', clients)
   }
 }
 </script>

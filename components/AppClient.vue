@@ -1,11 +1,11 @@
 <template>
-  <v-list-item :to="`/users/${user.id}`">
+  <v-list-item :to="`/clients/${client.id}`">
     <v-list-item-content>
-      <v-list-item-title v-html="user.name" />
-      <v-list-item-subtitle v-text="user.title" />
+      <v-list-item-title v-html="client.name" />
+      <v-list-item-subtitle v-text="client.title" />
     </v-list-item-content>
     <v-list-item-avatar :size="40">
-      <v-img :src="user.avatar">
+      <v-img :src="client.avatar">
         <template v-slot:placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
             <v-progress-circular
@@ -23,7 +23,7 @@
 <script>
 export default {
   props: {
-    user: {
+    client: {
       type: Object,
       default: () => {}
     }

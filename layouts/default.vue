@@ -47,8 +47,8 @@ export default {
         },
         {
           icon: 'mdi-account-multiple',
-          title: 'Users',
-          to: '/users'
+          title: 'Clients',
+          to: '/clients'
         }
       ],
       title: 'Clients:'
