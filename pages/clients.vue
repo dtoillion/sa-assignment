@@ -9,9 +9,13 @@
 <script>
 export default {
   async fetch({ $axios, store }) {
-    const response = await $axios.get('clients.json')
-    const clients = response.data
-    store.commit('SET_CLIENTS', clients)
+    try {
+      const response = await $axios.get('clients.json')
+      const clients = response.data
+      store.commit('SET_CLIENTS', clients)
+    } catch (error) {
+      alert(error)
+    }
   }
 }
 </script>

@@ -1,6 +1,7 @@
 <template>
   <v-list-item :to="`/clients/${client.id}`">
     <v-list-item-content>
+      <!-- todo: check for whitelisted html tags instead of using v-html -->
       <v-list-item-title v-html="client.name" />
       <v-list-item-subtitle v-text="client.title" />
     </v-list-item-content>

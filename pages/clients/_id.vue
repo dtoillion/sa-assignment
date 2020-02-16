@@ -2,6 +2,7 @@
   <v-card shaped>
     <div class="d-flex flex-no-wrap justify-space-between pa-4">
       <div>
+        <!-- todo: check for whitelisted html tags instead of using v-html -->
         <v-card-title class="headline" v-html="client.name" />
         <v-card-subtitle v-text="client.title" />
         <v-card-text>
