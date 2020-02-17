@@ -1,6 +1,7 @@
 <template>
   <v-list class="py-0">
     <v-list-item>
+      <!-- This search would be more testable if it was its own component -->
       <v-text-field
         v-model="search"
         placeholder="Search for client..."
