@@ -16,6 +16,7 @@ export default {
       const clients = response.data
       store.commit('SET_CLIENTS', clients)
     } catch (error) {
+      // todo: display the error message in a snackbar or toast
       console.log(error)
     }
   }

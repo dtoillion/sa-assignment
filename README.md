@@ -11,6 +11,9 @@ $ npm install
 # serve with hot reload at localhost:3000
 $ npm run dev
 
+# Run the Jest testing environment in watch mode
+$ npm run test
+
 # build for production and launch server
 $ npm run build
 $ npm run start
