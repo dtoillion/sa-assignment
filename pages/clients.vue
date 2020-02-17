@@ -14,7 +14,7 @@ export default {
       const clients = response.data
       store.commit('SET_CLIENTS', clients)
     } catch (error) {
-      alert(error)
+      console.log(error)
     }
   }
 }

@@ -1,3 +1,4 @@
+// In a more complicated app vuex modules would be more appropriate here
 export const state = () => ({
   clients: []
 })
